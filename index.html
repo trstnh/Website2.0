@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<title>Awards</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Merienda|Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand|Ramabhadra|Roboto+Condensed&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script language="javascript" type="text/javascript" href="style.javascript"> </script>
+</head>
+
+<body>
+    <script>
+        AOS.init();
+
+        $(document).ready(function(){
+  $("a").on('click', function(event) {
+ if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#Navi a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#Navi ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+
+
+
+      </script>
+  <div id="size">
+  <div id= "header">
+    <div id="content">
+    <h1><a href="index.html"> Awards </a></h1>
+    <hr> 
+      <div id="Navi">
+      <ul>
+        <li><a class="active"  href="index.html">Home </a></li>
+        <li><a href="#page2">Best action comedy </a></li>
+        <li><a href="#page3">Most watched series </a></li>
+        <li><a href="#page4">Best Thriller </a></li>
+        <li><a href="impressum.html">Impressum </a></li>
+        <li><a href="about.html">About  </a></li>
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<div id="container">
+
+<div id="bigheader">
+  <video
+  src="Video.mp4" type="Video/mp4" poster="header1.jpg"  autoplay muted loop >
+      <a href="https://www.youtube.com/watch?v=sa-KE1SJ2As"></a>
+  </video>
+</div>
+
+    
+
+<div id="size">
+  <div id="page2" name="page2" class="pages">
+    <div  class="category">
+        <div data-aos="fade-up" data-aos-duration="700"> 
+          <h2 >Best action comedy</h2>
+          </div>
+   </div>
+  <div class="movie" style="background-image: url(header1.jpg); width: 1200px; filter: ">
+    <div class="description">
+        <div data-aos="fade-up"
+        data-aos-duration="700">
+    <h2>Deadpool</h2>
+    <p> Stars: 5/5 <br>
+    -<br>
+    Most watched Movie of 2016<br>
+    -<br>
+    directed by Tim Miller<br>
+    <br>
+    watch the <b><a href="https://www.youtube.com/watch?v=sa-KE1SJ2As">TRAILER</a></b>
+  </p>
+  
+  </div>
+</div>
+  </div>
+</div>
+</div>
+
+
+
+<div id="page3" class="page2" name="page3">
+    <div class="categoryA">
+        <div data-aos="fade-up"
+        data-aos-duration="700"> <h2 >Most watched series</h2>
+        </div>
+   </div>
+  <div  class="movie" style="background-image: url(header2.jpg); witdh: 1200px; ">
+      
+    <div class="description">
+        <div data-aos="fade-up" data-aos-duration="700">
+    <h2>Stranger Things</h2>
+    <p> Stars: 4.8/ 5 <br>
+      -<br>
+      Most watched serie of 2016<br>
+      -<br>
+      directed by Bryan Bertino<br>
+      <br>
+      watch the <b><a href="https://www.youtube.com/watch?v=mef3c22NWDI">TRAILER</a></b>
+  
+  </div>
+</div>
+</div>
+</div>
+
+<div id="page4" class="page2" name="page4">
+    <div class="categoryA" >
+        <div data-aos="fade-up" data-aos-duration="700"> 
+        <h2>Best Thriller</h2>
+        </div>
+   </div>
+  <div  class="movie" style="background-image: url(header3.jpg); width: 1200px; " >
+    
+    <div class="description">
+        <div data-aos="fade-up"
+        data-aos-duration="700">
+    <h2>Fight Club</h2>
+    <p> Stars: 5/5 <br>
+      -<br>
+      Voted to best Thriller<br>
+      -<br>
+      directed by David Fincher<br>
+      <br>
+      watch the <b><a href="https://www.youtube.com/watch?v=G7tr7xcUCFA">TRAILER</a></b>
+    </p>
+  
+  </div>
+</div>
+  </div>
+</div>
+
+
+
+<div id="footer">
+    <hr class="footerhr"> 
+    
+      <div class="footerleft">
+        <a href="about.html" >About us</a>
+      </div>
+    
+      <div class="footermid">
+        <a href="index.html"><h1>Awards.</h1></a>
+      </div>
+    
+      <div class="footerright">
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </div>
+</div>
+
+    </body>
+
+</html>
